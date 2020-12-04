@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+
+<html>
+<meta charset="UTF-8">
+<head>
+<title>Insert information of a plant</title>
+</head>
+
+<body>
+
+<form action="{% url 'plantCreate' %}" method="POST">{% csrf_token %}
+
+        plant name: <br>
+
+        <input name="name"><br>
+
+        recommended daily sunlight of the plant: <br>
+
+        <input name="g_sunlight"><br>
+
+        recommended water cycle of the plant: <br>
+
+        <input name="water"><br>
+
+        recommended temperature of the plant: <br>
+
+        <input name="g_temp"><br>
+
+        plant size: <br>
+
+        <input name="size"><br>
+
+        <input type="submit" value="add this plant">
+
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+
+<html>
+<meta charset="UTF-8">
+<head>
+<title>Insert information and get recommendation</title>
+</head>
+
+<body>
+
+<form action="{% url 'save_user' %}" method="POST">{% csrf_token %}
+
+        sunlight of my house: <br>
+
+        <input name="h_sunlight"><br>
+
+        temperature of my house: <br>
+
+        <input name="h_temp"><br>
+
+        desired plant size: <br>
+
+        <input name="desired_size"><br><br>
+
+        <input type="submit" value="get recommend">
+</form>
+
+</body>
+
+</html>
+

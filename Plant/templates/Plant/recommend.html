@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+
+<html>
+<meta charset="UTF-8">
+<head>
+<title>당신에게 어울리는 식물</title>
+</head>
+
+<body>
+<h1>* Plant for you *</h1> <br>
+
+Plant Name is {{result.name}}.
+Need Sunlight for {{result.g_sunlight}} hours.
+Can live at {{result.g_temp}} Celsius Degrees.
+You should water plant every {{result.water}} days.
+<br>
+
+<a href="{% url 'index' %}">
+    <button type="button">다시 해보기</button>
+</a>
+
+</body>
+
+</html>
