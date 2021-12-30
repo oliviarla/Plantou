@@ -26,7 +26,8 @@ def save_user(request):
 # user의 정보를 바탕으로 적절한 plant 데이터를 불러옴
 def recommend(request):
     user = User.objects.order_by('-user_id').first()
-    # plant = Plant.objects.filter(size=user.desired_size).get()
+    result = Plant.objects.filter(size=user.desired_size).get()
+    '''
     plants = Plant.objects.all()
     for plant in plants:
         if str(plant.size) == str(user.desired_size):
@@ -36,7 +37,7 @@ def recommend(request):
             break
         else:
             return HttpResponse("not matching")
-
+    '''
     return render(request, 'Plant/recommend.html', {'result': result})
 
 
